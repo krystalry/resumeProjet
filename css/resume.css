@@ -2,15 +2,24 @@ body {
     background: #efefef;
     margin: 0;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 /*通配符，匹配所有的元素，针对所有元素的设置参数*/
 * {
     margin: 0;
     padding: 0;
 }
+
+hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #DEDEDE;
+}
+
 /*清除浮动*/
 .clearfix::after {
     content: '';
@@ -18,40 +27,48 @@ a {
     clear: both;
 }
 
-.topNavBar {
+/*头部*/
+header {
     width: 100%;
     padding: 15px 0 15px 0;
     position: fixed;
     top: 0;
     left: 0;
 }
+
 .topNavBar-inner {
     padding: 0 15px;
 }
-.topNavBar nav {
+
+header nav {
     padding-top: 7px;
 }
-.topNavBar nav > ul {
+
+header nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.topNavBar nav > ul > li {
+
+header nav > ul > li {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
 }
-.topNavBar nav > ul > li > a {
+
+header nav > ul > li > a {
     font-size: 13px;
     font-weight: bold;
     display: block;
     padding: 12px 0;
     color: #b7b7b7;
 }
-.topNavBar nav > ul > li > a:hover {
+
+header nav > ul > li > a:hover {
     border-bottom: 3px solid #e06567;
 }
-.topNavBar .logo {
+
+header .logo {
     float: left;
     padding-top: 5px;
     padding-bottom: 4px;
@@ -59,19 +76,125 @@ a {
     font-family: 'Arial Black';
     color: #9a9da2;
 }
-.topNavBar .logo .rs {
+
+header .logo .rs {
     margin-right: 4px;
     font-size: 22px;
     color: #e83b35;
 }
-nav{
+
+nav {
     float: right;
 }
+
 .banner {
     height: 515px;
-    background: url(../img/Joker.jpg) center/cover  no-repeat;
+    background: url(../img/Joker.jpg) center/cover no-repeat;
 }
+
 .banner .mask {
     height: 515px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*主体*/
+.userCard {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.userCard .welcome {
+    background: #e6686a;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+}
+
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-top: 10px solid #e6686a;
+    border-right: 10px solid transparent;
+}
+
+/*.userCard .welcome .triangle {*/
+/*display: block;*/
+/*border: 10px solid transparent;*/
+/*width: 0;*/
+/*border-left-color: #e6686a;*/
+/*border-top-width: 0;*/
+/*position: absolute;*/
+/*left: 4px;*/
+/*top: 100%;*/
+/*}*/
+
+.userCard .picture {
+    float: left;
+}
+
+.userCard .picture img {
+    width: 299px;
+    height: 347px;
+}
+
+.userCard .text {
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+
+.userCard .text h1 {
+    margin-top: 18px;
+}
+
+.userCard .text hr {
+    margin: 20px 0;
+}
+
+.userCard .pictureAndText {
+    padding: 50px;
+}
+
+.userCard .itemLeft{
+    float: left;
+    width: 40%;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.userCard .itemRight{
+    float: right;
+    width: 60%;
+    padding: 5px 0;
+    color: #9da0a7;
+}
+
+.userCard > footer.media {
+    background: #E6686A;
+    text-align: center;
+}
+
+.userCard > footer.media > a {
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.userCard > footer.media > a:hover {
+    background: #CF5D5F;
+}
+
+.userCard svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
 }

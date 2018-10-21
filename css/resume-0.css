@@ -100,9 +100,11 @@ nav {
 /*主体*/
 .userCard {
     max-width: 940px;
+    margin-top: -340px;
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5)
 }
 
 .userCard .welcome {
@@ -197,4 +199,169 @@ nav {
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+
+.items {
+    margin-bottom: 13px;
+}
+
+.download{
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn{
+    padding: 10px 140px;
+    border: 1px solid #cbcdcf;
+    background: transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.information{
+    margin-top: 24px;
+}
+
+.skills,
+.portfolio,
+footer{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+.skills > h2 ,
+.portfolio > h2 {
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+.skills h3 {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+}
+.skills > ol {
+    background: white;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+}
+.skills > ol > li {
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+}
+.skills > ol > li:nth-child(even) {
+    float: right;
+}
+
+.skills .progressBar {
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+.skills .progressBar > .progress {
+    height: 100%;
+    background: #E6686A;
+    width: 70%;
+    border-radius: 2px;
+}
+
+.portfolio {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.portfolio > nav{
+    text-align: center;
+}
+.portfolio > nav > ol{
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+.portfolio > nav > ol > li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.portfolio > nav > ol > li:first-child{
+    margin-left: 0;
+
+}
+.portfolio > nav{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 32px;
+}
+.portfolio > nav .bar{
+    height: 5px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+}
+.portfolio > nav .bar-inner{
+    height: 100%;
+    background: #E6686A;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.portfolio > nav .bar.state-1 .bar-inner{
+    margin-left: 0;
+    width: 50px;
+}
+.portfolio > nav .bar.state-2 .bar-inner{
+    margin-left: 65px;
+    width: 50px;
+}
+.portfolio > nav .bar.state-3 .bar-inner{
+    margin-left: 140px;
+    width: 96px;
+}
+.portfolio .works{
+    position: relative;
+}
+.portfolio .works > .big,
+.portfolio .works > .small {
+    position: absolute;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.slideImg{
+    /*background-image: url(../img/1.jpg);*/
+    width: 300px;
+}
+
+.works{
+    margin: 20px;
+    text-align: center;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>userCard</title>
     <link rel="stylesheet" href="../css/resume-0.css">
+    <link href="https://cdn.bootcss.com/Swiper/4.4.1/css/swiper.min.css" rel="stylesheet">
     <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
         <symbol id="icon-weibo" viewBox="0 0 1024 1024">
             <path d="M758.357 501.161c-39.818-7.713-20.445-29.137-20.445-29.137s38.961-64.271-7.713-110.976c-57.875-57.845-198.477 7.376-198.477 7.376-53.713 16.68-39.451-7.621-31.861-48.908 0-48.663-16.68-131.022-159.73-82.359C197.234 286.065 74.505 457.395 74.505 457.395-10.823 571.278 0.501 659.269 0.501 659.269c21.301 194.285 227.736 247.631 388.293 260.27 168.913 13.223 396.925-58.242 466.032-205.088C923.963 567.36 798.328 509.149 758.357 501.161zM401.312 864.755c-167.719 7.836-303.271-76.27-303.271-188.164 0-112.047 135.552-201.873 303.271-209.616 167.78-7.743 303.608 61.425 303.608 173.196C704.92 752.065 569.092 857.104 401.312 864.755z"></path>
@@ -85,23 +86,23 @@
                 <img src="../img/picture.gif" alt="头像">
             </div>
             <div class="text">
-          <div class="welcome">Hello</div>
+                <div class="welcome">Hello</div>
                 <div id="triangle-topleft">&nbsp;</div>
                 <h1>徐伟</h1>
                 <p>前端小白</p>
                 <hr>
                 <div class="personalDetails clearfix">
                     <div class="itemLeft">
-                        <div>年龄</div>
-                        <div>所在城市</div>
-                        <div>邮箱</div>
-                        <div>手机</div>
+                        <div class="items">年龄</div>
+                        <div class="items">所在城市</div>
+                        <div class="items">邮箱</div>
+                        <div class="items">手机</div>
                     </div>
                     <div class="itemRight">
-                        <div>99</div>
-                        <div>成都</div>
-                        <div>aaxuwei@qq.com</div>
-                        <div>1234567890</div>
+                        <div class="items">99</div>
+                        <div class="items">成都</div>
+                        <div class="items">aaxuwei@qq.com</div>
+                        <div class="items">1234567890</div>
                     </div>
                 </div>
             </div>
@@ -124,10 +125,102 @@
             </a>
         </footer>
     </div>
+    <div class="download">
+        <p><a class="btn" target="_blank" href="#"
+              download="../img/picture.gif">
+            下载 </a></p>
+        <p class="information">个人简介:徐伟，小白前端工程师..........</p>
+    </div>
+    <div class="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li>
+                <h3>
+                    HTML 5 &amp; CSS 3
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    JavaScript
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    jQuery
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 30%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    Vue.js
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 10%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    React.js
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 20%"></div>
+                </div>
+            </li>
+            <li>
+                <h3>
+                    Node.js
+                </h3>
+                <div class="progressBar">
+                    <div class="progress" style="width: 40%"></div>
+                </div>
+            </li>
+        </ol>
+    </div>
 </main>
+<footer>
+    <h2 class="works" style="text-align: center">作品集</h2>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="slideImg" src="../img/1.jpg" alt="picture1"></div>
+            <div class="swiper-slide"><img class="slideImg" src="../img/2.jpg" alt="picture2"></div>
+            <div class="swiper-slide"><img class="slideImg" src="../img/3.jpg" alt="picture3"></div>
+            <div class="swiper-slide"><img class="slideImg" src="../img/4.jpg" alt="picture4"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</footer>
 <div>
-    <h2 style="margin-top: 4rem">技能</h2>
+    <h2 style="margin: 4rem 0; text-align: center">联系方式(待续)</h2>
 </div>
-<!--<div id="triangle-topleft">&nbsp;</div>-->
+<script src="https://cdn.bootcss.com/Swiper/4.4.1/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+//            el: '.swiper-pagination',
+            el: '.swiper-pagination',
+            type: 'progressbar',
+            loop : true,
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
+</script>
 </body>
 </html>
