@@ -74,7 +74,6 @@
                 messageList.appendChild(li);
                 myForm.querySelector('input[name=content]').value = '';
                 myForm.querySelector('input[name=name]').value = '';
-                console.log(object)
             })
         }
     };
