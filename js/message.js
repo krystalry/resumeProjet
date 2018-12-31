@@ -60,11 +60,11 @@
             let myForm = this.form;
             let content = myForm.querySelector('input[name=content]').value;
             let name = myForm.querySelector('input[name=name]').value;
-            if(content ==''){
-                alert('评论内容不能为空');
-                return false;
-            }else if(name==''){
+            if (name == '') {
                 alert('请输入用户名');
+                return false;
+            } else if (content == '') {
+                alert('评论内容不能为空');
                 return false;
             }
             this.model.save(name, content).then(function (object) {
