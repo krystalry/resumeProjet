@@ -51,7 +51,7 @@
             )
         },
         bindEvents: function () {
-            this.form.addEventListener('submit',  (e) => { // 箭头函数不会犯贱改你的this
+            this.form.addEventListener('submit', (e) => { // 箭头函数不会犯贱改你的this
                 e.preventDefault();
                 this.saveMessage()
             })
@@ -60,6 +60,13 @@
             let myForm = this.form;
             let content = myForm.querySelector('input[name=content]').value;
             let name = myForm.querySelector('input[name=name]').value;
+            if(content ==''){
+                alert('评论内容不能为空');
+                return false;
+            }else if(name==''){
+                alert('请输入用户名');
+                return false;
+            }
             this.model.save(name, content).then(function (object) {
                 let li = document.createElement('li');
                 li.innerText = `${object.attributes.name}: ${object.attributes.content}`;
